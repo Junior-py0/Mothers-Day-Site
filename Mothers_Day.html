@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mother's Day</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #fff8fb;
+            font-family: "Poppins", sans-serif;
+            color: #555;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ffe0eb, #ffffff);
+            color: #d45b78;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .section {
+            background: white;
+            max-width: 750px;
+            margin: 25px auto;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-size: 1.7rem;
+            color: #e68aa1;
+        }
+
+        .photo-frame {
+            background: white;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            margin-top: 15px;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .memory {
+            background: #ffe6f1;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 12px 0;
+            border-left: 5px solid #ffb6c9;
+        }
+
+        .reveal-box {
+            background: #ffe2ed;
+            padding: 18px;
+            border-radius: 14px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .reveal-box:hover {
+            background: #ffd3e4;
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 15px;
+            background: #fff1f7;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid #ffb3c5;
+            overflow: hidden;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #aa8f97;
+            font-size: 0.9rem;
+        }
+
+        .marquee {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            animation: scroll 15s linear infinite;
+        }
+
+        .marquee-content img {
+            height: 160px;
+            width: auto;
+            margin-right: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to   { transform: translateX(-120%); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <script>
+        function revealMessage() {
+            const msg = document.getElementById("secret");
+            msg.style.display = msg.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Happy Mother's Day ❤️</h1>
+    <p>You are loved more than you know</p>
+</header>
+
+<div class="section">
+    <h2>🌸 A Memory I'll Always Cherish</h2>
+
+    <div class="photo-frame">
+        <img src="Photo1.jpeg" alt="Memory Photo">
+    </div>
+</div>
+
+<div class="section">
+    <h2>💖 Reasons You Mean Everything to Me</h2>
+
+    <div class="memory">You always put me first, even when you’re tired or stressed.</div>
+    <div class="memory">You show your love in the smallest ways that mean the most.</div>
+    <div class="memory">You believe in me, even when I don’t believe in myself.</div>
+</div>
+
+<div class="section">
+    <h2>📜 My Message to You</h2>
+    <p>
+        I know I haven’t been the easiest child lately. But no matter
+        how much i stress you you still put LOTS of effort into making 
+        sure my life is as comfortable as possible.
+    </p>
+    <p>
+        And I want you to know that I see it.  
+        I see every effort you make to make my life easier
+        like today, when you bought me KFC after I finished writing my NBT even though there was food at home.  
+        It may seem like a small thing, but to me it meant a lot.  
+        It reminded me that no matter what’s going on, your love for me never stops.
+    </p>
+    <p>
+        I love you, and I appreciate you so much as my mother.  
+        I don’t say it enough, but I really do mean it.  
+        You deserve the best, and I promise I’m going to try harder
+        to be better, to listen more, and to be the kind of son you can be proud of.
+    </p>
+    <p>
+        Thank you for everything you do for me.  
+        And thank you for being my mom. ❤️
+    </p>
+</div>
+
+<div class="section">
+    <h2>🎁 Tap for a Surprise</h2>
+
+    <div class="reveal-box" onclick="revealMessage()">
+        Tap to reveal
+    </div>
+
+    <div id="secret" class="hidden-message">
+        <div class="marquee">
+            <div class="marquee-content">
+
+                <img src="Photo2.jpeg" alt="Photo 1">
+                <img src="Photo3.jpeg" alt="Photo 2">
+                <img src="Photo4.jpeg" alt="Photo 3">
+                <img src="Photo5.jpeg" alt="Photo 4">
+                <img src="Photo6.jpeg" alt="Photo 5">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
